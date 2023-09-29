@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    color: #679436;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    font-size: 16px;
+    position: relative;
+}
+
+.logo {
+    color: #679436;
+    position: relative;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: showRight 3s ease forwards;
+    animation-delay: .4s;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.right img {
+    width: 74%;
+}
+
+.left {
+    max-width: 100%;
+    padding: 40px 100px;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.titulo {
+    color: #679436;
+    font-size: 3.2em;
+    width: 100%;
+    font-weight: 1500;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.subtitulo {
+    color: #869D7A;
+    font-size: 1.2em;
+    width: 100%;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.msg {
+    color: #9fb5cc;
+    font-size: 1.1em;
+    letter-spacing: 0.7px;
+    line-height: 32px;
+    margin-bottom: 48px;
+    font-weight: 800;
+    position: relative;
+}
+
+.titulo::before,
+.subtitulo:before,
+.msg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
+}
+
+.vida-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.vida-main .left img {
+    max-width: 125%;
+    height: auto;
+    width: 125%;
+}
+
+.vida-titulo {
+    color: #869D7A;
+    font-size: 1.8em;
+    font-weight: 1000;
+    letter-spacing: 1px;
+}
+
+.vida-texto {
+    color: #2D2D2A;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    flex: 1;
+    margin-right: 50px;
+}
+
+.logros-main {
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 30px;
+    background-color: #869D7A;
+}
+
+.logros h2 {
+    margin-top: 50px;
+    text-align: center;
+    color: #ffff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+
+.card {
+    height: 540px;
+    width: 385px;
+    padding: 20px 35px;
+    background: #679436;
+    border-radius: 20px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card i {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    margin: 0px 0px;
+    color: #2D2D2A;
+}
+
+h5 {
+    color: #2D2D2A;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.pra p {
+    color: #EEE5E9;
+    font-size: 15px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.reconocimientos-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row-reverse;
+}
+
+.reconocimientos-main .left2 img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.reconocimientos-titulo {
+    color: #869D7A;
+    font-size: 2.8em;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+.reconocimientos-texto-titulo {
+    color: #679436;
+    font-size: 1.8em;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    margin-bottom: 0;
+}
+
+.reconocimientos-texto {
+    color: #2D2D2A;
+    font-size: 1em;
+    flex: 1;
+    margin-right: 10px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .vida-main {
+        flex-direction: column;
+    }
+
+    .vida {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .left img {
+        width: 100%;
+    }
+
+    .vida-titulo {
+        font-size: 1.5em;
+    }
+
+    .box {
+        flex-basis: 100%;
+    }
+
+    .card {
+        margin: 10px auto;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width:800px) {
+    header,
+    .left,
+    .right {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        font-size: 0.8em;
+    }
+
+    .left * {
+        width: 95%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    button.cta {
+        max-width: 60%;
+    }
+
+    .right img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reconocimientos-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reconocimientos-main .left2 img {
+        max-width: 100%;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    .reconocimientos-titulo {
+        font-size: 1.5em;
+    }
+
+    .reconocimientos-texto {
+        font-size: 1em;
+    }
+}
